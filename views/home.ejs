@@ -7,6 +7,29 @@
     <title>URL Shortner</title>
 </head>
 <body>
-    <h1>Url Shortner</h1>
+    <h1>URL SHORTNER</h1>
+    <form action="/shortUrl" method="POST">
+        <label for="url">URL</label>
+        <input type="url" name="fullUrl" id="fullUrl">
+        <button type="submit">Shrink</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Full URL</th>
+                <th>Short URL</th>
+                <th>Clicks</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><a href="http://saurabhportfolio.rf.gd/?i=1">http://saurabhportfolio.rf.gd/?i=1</a></td>
+                <td><a href="/123123">123123</a></td>
+                <td>10</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
