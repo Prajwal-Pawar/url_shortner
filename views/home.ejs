@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>URL SHORTNER</h1>
-    <form action="/shortUrl" method="POST">
+    <form action="/shortUrls" method="POST">
         <label for="url">URL</label>
         <input type="url" name="fullUrl" id="fullUrl">
         <button type="submit">Shrink</button>
@@ -24,12 +24,15 @@
         </thead>
 
         <tbody>
-            <tr>
-                <td><a href="http://saurabhportfolio.rf.gd/?i=1">http://saurabhportfolio.rf.gd/?i=1</a></td>
-                <td><a href="/123123">123123</a></td>
-                <td>10</td>
-            </tr>
+            <% for (let i of shortUrl) { %>
+                <tr>
+                    <td><a href="<%= i.full %>"><%= i.full %></a></td>
+                    <td><a href="<%= i.short %>"><%= i.short %></a></td>
+                    <td><a href="<%= i.clicks %>"><%= i.clicks %></a></td>
+                </tr>
+            <% } %>
         </tbody>
+        
     </table>
 </body>
 </html>

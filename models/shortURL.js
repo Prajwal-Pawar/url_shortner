@@ -8,6 +8,16 @@ const shortUrlSchema = mongoose.Schema({
     },
     short: {
         type: String,
-        required: true
+        required: true,
+        default: shortid.generate
+    },
+    clicks: {
+        type: Number,
+        required: true,
+        default: 0
     }
 });
+
+const ShortURL = mongoose.model('ShortURL', shortUrlSchema);
+
+module.exports = ShortURL;
